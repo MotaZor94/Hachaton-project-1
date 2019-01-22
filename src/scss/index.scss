@@ -1,0 +1,228 @@
+/*!
+ * Bootstrap v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// custom variables
+@import "custom-bootstrap-variables"; 
+
+// Bootstrap styles. Comment out those you do not need
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/root";
+@import "./node_modules/bootstrap/scss/reboot";
+@import "./node_modules/bootstrap/scss/type";
+@import "./node_modules/bootstrap/scss/images";
+@import "./node_modules/bootstrap/scss/code";
+@import "./node_modules/bootstrap/scss/grid";
+@import "./node_modules/bootstrap/scss/tables";
+@import "./node_modules/bootstrap/scss/forms";
+@import "./node_modules/bootstrap/scss/buttons";
+@import "./node_modules/bootstrap/scss/transitions";
+@import "./node_modules/bootstrap/scss/dropdown";
+@import "./node_modules/bootstrap/scss/button-group";
+@import "./node_modules/bootstrap/scss/input-group";
+@import "./node_modules/bootstrap/scss/custom-forms";
+@import "./node_modules/bootstrap/scss/nav";
+@import "./node_modules/bootstrap/scss/navbar";
+@import "./node_modules/bootstrap/scss/card";
+@import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/badge";
+@import "./node_modules/bootstrap/scss/jumbotron";
+@import "./node_modules/bootstrap/scss/alert";
+@import "./node_modules/bootstrap/scss/progress";
+@import "./node_modules/bootstrap/scss/media";
+@import "./node_modules/bootstrap/scss/list-group";
+@import "./node_modules/bootstrap/scss/close";
+@import "./node_modules/bootstrap/scss/modal";
+@import "./node_modules/bootstrap/scss/tooltip";
+@import "./node_modules/bootstrap/scss/popover";
+@import "./node_modules/bootstrap/scss/carousel";
+@import "./node_modules/bootstrap/scss/utilities";
+@import "./node_modules/bootstrap/scss/print";
+
+// own styles (feel free to add more)
+@import "base";
+@import "coffee";
+
+body {
+    font-family: $font;
+    @media all and (min-width: 577px) {
+        min-width: 577px;
+    }
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4db78;
+    @media all and (min-width: 577px) {
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 1% 15%; 
+    } 
+    svg {
+        width: 7em;
+        height: 7em;
+        margin-top: 1em;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+        padding-left: 0;
+        @media all and (min-width: 577px) {
+            justify-content: space-around;
+            width: 30%;
+        }
+        li {
+            padding-top: .5em;
+            a {
+             color: black;
+            }
+            .current {
+                color: slategray;
+            }
+        }
+    }
+}
+main {
+    margin: 5%;
+    position: relative;
+    @media all and (min-width: 577px) {
+        margin: 0 15%;
+    }
+    h1, h2 {
+        width: 70%;
+        line-height: 1.6em;
+        letter-spacing: 3px;
+        @media all and (min-width: 577px) {
+            width: 90%;
+        }
+    }
+    img {
+        width: 100%;
+    }
+    aside {
+        @media all and (min-width: 577px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            width: 80%;
+        }
+        h3, p {
+            margin-top: 1em;
+        }
+    }
+    .empty {
+        height: 10vh;
+        @media all and (min-width: 577px) {
+            height: 60vh;
+        }
+        @media all and (min-width: 1440px) {
+            height: 65vh;
+        }
+    }
+    iframe {
+        position: absolute;
+        bottom: -4em;
+        width: 100%;
+        @media all and (min-width: 577px) {
+            height: 70vh;
+            bottom: -4em;
+        }
+    }
+}
+footer {
+    background-color: #2B404F;
+    height: 30vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+        list-style: none;
+        display: flex;
+        margin-top: .5em;;
+        padding-left: 0;
+        width: 100%;
+        justify-content: space-around;
+        @media all and (min-width: 577px) {
+            width: 35%;
+            justify-content: center;
+            margin-top: 5em;
+        }
+        li {
+            @media all and (min-width: 577px) {
+                margin: 0 2em;
+            }
+            a {
+                text-decoration: underline;
+            }
+            .current {
+                color: lightgray;
+                text-decoration: none;
+            }
+        }
+    }
+    strong {
+        margin-top: 1em;
+        @media all and (min-width: 577px) {
+            margin-top: 3em;
+        }
+    }
+    p {
+        margin-top: 2em;
+        @media all and (min-width: 577px) {
+            margin-top: 0;
+        }
+        span {
+            color: dodgerblue;
+            text-decoration: underline;
+        }
+    }
+}
+/*-----------coffe style---------*/
+.coffee {
+    p {
+        span {
+            color: dodgerblue;
+            text-decoration: underline;
+        }
+    }
+    section {
+        div {
+            background-color: whitesmoke;
+            img {
+                padding: 0; 
+            }
+            h2 {
+                font-size: 1.2em;
+                @media all and (min-width: 577px) {
+                    font-size: 1.5em;
+                }
+            }
+            h5 {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+/*--------------story section---------*/
+.story {
+    color: white;
+    background-color: #2B404F;
+    div {
+        padding: 1% 15%;
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 2em;
+        }
+    }
+}
